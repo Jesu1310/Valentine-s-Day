@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <img id="myImage" src="giphy.gif" alt="Giphy GIF">
+        <h2 class="question">Wanna be my valentine?</h2>
+        <div class="btn-group">
+            <button class="yes-btn" onclick=after();>Yes</button>
+            <button class="no-btn" onclick=before();>No</button>
+        </div>
+    </div>
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+const question = document.querySelector('.question');
+const yesBtn = document.querySelector('.yes-btn');
+const noBtn = document.querySelector('.no-btn');
+const wrapperRect = wrapper.getBoundingClientRect();
+const noBtnRect = noBtn.getBoundingClientRect();
+//yesBtn.addEventListener('click', () => {
+    //document.getElementById('mainImage').src = 'qwert.gif';;
+//});
+noBtn.addEventListener('mouseover', () => {
+    const i = Math.floor(Math.random() * (wrapperRect.width - noBtnRect.width)) + 1;
+    const j = Math.floor(Math.random() * (wrapperRect.height - noBtnRect.height)) + 1;
+    noBtn.style.left = i + 'px';
+    noBtn.style.top = j + 'px';
+});
+    </script>
+
+<script>
+    function before(){
+document.getElementById('myImage')
+.src="giphy.gif";
+}
+
+function after(){
+document.getElementById('myImage')
+.src="qwert.gif";
+
+}
+
+yesBtn.addEventListener('click', () => {
+    question.innerHTML = 'See you on Feb 14th';})
+</script> 
+<script>
+    function playSound(audioName,loop){
+    let audio = new Audio(audioName);
+    audio.loop=loop;
+    audio.play();
+}
+playSound("./audio.mp3",true);
+</script>
+</body>
+</html>
+
+explain DNN
+Jangi
